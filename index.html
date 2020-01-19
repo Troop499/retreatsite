@@ -50,7 +50,7 @@
       margin-left: auto ;
       margin-right: auto ;
       border: 4px solid #795548;
-      padding: 25px;
+      padding: 45px;
       border-radius: 25px;
       background-color: #fafafa;
       font-family: 'Ubuntu', sans-serif;
@@ -100,14 +100,19 @@
         <br>
 
         <div id="box">
-          <h1> Sign Up</h1>
+          <h1>Sign Up</h1>
           <!-- email prompt -->
           <form action="#">
-            <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label">
+            <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label" id="email">
               <input class="mdl-textfield__input" type="text" id="email">
               <label class="mdl-textfield__label" for="email">Email ID</label>
             </div>
           </form>
+
+          <br>
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="sendEmail()">
+            Submit
+          </button>
 
         </div>
         <br>
