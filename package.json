@@ -1,0 +1,22 @@
+{
+  "name": "retreatsite",
+  "version": "1.0.0",
+  "description": "A website for sign up for the Retreat",
+  "main": "submit_events.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Troop499/retreatsite.git"
+  },
+  "author": "ansarirayyan",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/Troop499/retreatsite/issues"
+  },
+  "homepage": "https://github.com/Troop499/retreatsite#readme",
+  "dependencies": {
+    "browserify": "^16.5.0"
+  }
+}

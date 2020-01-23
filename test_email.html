@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+
+<body>
+
+<script>
+  Email.send({
+    SecureToken : "ff5697e6-a741-4b93-9450-d477386fa5d4",
+    To : 'sbia.troop499.retreatcommittee@gmail.com',
+    From : "testacc123.ansarirayyan@gmail.com",
+    Subject : "sujet",
+    Body : "body"
+}).then(
+  message => alert(message)
+);
+</script>
+</body>
