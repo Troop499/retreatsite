@@ -1,7 +1,7 @@
 let button = document.getElementById('submit');
 button.addEventListener('click', sendPOSTreq);
 
-function sendPOSTreq() {
+async function sendPOSTreq() {
   let response = await fetch("../api/sumbit_events.js", {
     method: 'POST',
     headers: {
