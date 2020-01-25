@@ -42,4 +42,13 @@ function sendEmail() {
           console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
       });
   });
+
+  module.exports = (req, res) => {
+    res.json({
+      body: req.body,
+      query: req.query,
+      cookies: req.cookies
+    })
+  }
+
 }
