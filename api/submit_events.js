@@ -1,7 +1,8 @@
-function sendEmail() {
-  // Use at least Nodemailer v4.1.0
-  const nodemailer = require('nodemailer');
+// needed stuff
+const nodemailer = require('nodemailer');
+const fetch = require('node-fetch');
 
+module.exports = async (req, res) => {
   // Generate SMTP service account from ethereal.email
   nodemailer.createTestAccount((err, account) => {
       if (err) {
@@ -34,6 +35,15 @@ function sendEmail() {
       transporter.sendMail(message, (err, info) => {
           if (err) {
               console.log('Error occurred. ' + err.message);
+
+              let response = await fetch(err.message, {
+			             headers: {
+				                 "Authorization": `Basic ${basic}`
+			                    }
+		          });
+		          res.status(response.status);
+		          res.end(await response.text());
+
               return process.exit(1);
           }
 
@@ -50,5 +60,4 @@ function sendEmail() {
       cookies: req.cookies
     })
   }
-
 }
