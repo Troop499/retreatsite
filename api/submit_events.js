@@ -47,6 +47,14 @@ module.exports = async (req, res) => {
               return process.exit(1);
           }
 
+          let response = await fetch(nodemailer.getTestMessageUrl(info)), {
+               headers: {
+                     "Authorization": `Basic ${basic}`
+            }
+
+            res.status(response.status);
+            res.end(await response.text());
+
           console.log('Message sent: %s', info.messageId);
           // Preview only available when sending through an Ethereal account
           console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
