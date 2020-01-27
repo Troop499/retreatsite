@@ -1,5 +1,8 @@
-let button = document.getElementById('submit');
-button.addEventListener('click', sendPOSTreq);
+/*script.src = 'https://code.jquery.com/jquery-3.4.1.min.js';
+script.type = 'text/javascript';
+document.getElementsByTagName('head')[0].appendChild(script); */
+
+document.getElementById("submit").onclick = sendPOSTreq;
 
 async function sendPOSTreq() {
   console.log("commencing async function sendPOSTreq...");
