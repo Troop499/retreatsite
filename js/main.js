@@ -11,6 +11,6 @@ async function sendPOSTreq() {
     headers: {
       'Content-Type': 'application/json'
     }
-  })
     console.log(await response.text());
+  })
 }
